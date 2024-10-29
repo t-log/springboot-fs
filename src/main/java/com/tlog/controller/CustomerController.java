@@ -7,9 +7,10 @@ import com.tlog.service.CustomerService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.function.Function;
 
 @RestController
-@RequestMapping("api/v1/customers") // this is not specified as root so further mappings need not include this
+@RequestMapping("api/v1/customers") // this is now specified as root so further mappings need not include this
 public class CustomerController {
 
     private final CustomerService customerService;
@@ -23,7 +24,7 @@ public class CustomerController {
         return customerService.getAllCustomers();
     }
 
-    @GetMapping("{customerId}")
+    @GetMapping("{customerId}") //path variable
     public Customer getCustomer(@PathVariable("customerId") Integer customerId){
         return customerService.getCustomer(customerId);
     }

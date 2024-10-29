@@ -1,0 +1,24 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "name": "tlog-crud-api",
+      "image": "tlogger/tlog-crud-api:latest",
+      "essential": true,
+      "memory": 512,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 8080
+        }
+      ],
+      "environment": [
+        {
+          "name":"SPRING_DATASOURCE_URL",
+          "value": "jdbc:postgresql://awseb-e-pzkwpnksbb-stack-awsebrdsdatabase-6r3iqdfo1ppy.cnemik6em9n7.ap-south-1.rds.amazonaws.com:5432/customer"
+        }
+      ]
+    }
+  ]
+}
+

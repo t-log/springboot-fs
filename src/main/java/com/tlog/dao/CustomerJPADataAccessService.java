@@ -8,11 +8,11 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository("jpa")
-public class CustomerJPADAO implements CustomerDAO{
+public class CustomerJPADataAccessService implements CustomerDAO{
 
     private final CustomerRepository customerRepository;
 
-    public CustomerJPADAO(CustomerRepository customerRepository) {
+    public CustomerJPADataAccessService(CustomerRepository customerRepository) {
         this.customerRepository = customerRepository;
     }
 

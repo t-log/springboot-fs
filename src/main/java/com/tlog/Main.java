@@ -1,5 +1,7 @@
 package com.tlog;
 
+import com.github.javafaker.Faker;
+import com.github.javafaker.Name;
 import com.tlog.model.Customer;
 import com.tlog.repository.CustomerRepository;
 import org.springframework.boot.CommandLineRunner;
@@ -10,6 +12,7 @@ import org.springframework.context.annotation.Bean;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 @SpringBootApplication
 public class Main {
@@ -21,10 +24,13 @@ public class Main {
     @Bean
     CommandLineRunner runner(CustomerRepository customerRepository){
         return args ->{
-            Customer alex = new Customer(1,"Alex","alex@gmail.com",21);
-            Customer jamila = new Customer(2, "Jamila", "jamila@gmail.com", 27);
-            List<Customer> customers = List.of(alex, jamila);
-            customerRepository.saveAll(customers);
+            Faker faker = new Faker();
+            Random randomAge = new Random();
+            String firstName = faker.name().firstName();
+            String lastName = faker.name().lastName();
+            customerRepository.save(new Customer(firstName+" "+lastName,
+                    firstName.toLowerCase()+"."+lastName.toLowerCase()+"@tlog.com",
+                    randomAge.nextInt(16,99)));
         };
     }
 
