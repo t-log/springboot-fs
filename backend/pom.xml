@@ -18,7 +18,7 @@
 	<description>Basic CRUD api</description>
 	<properties>
 		<java.version>17</java.version>
-		<docker.username>tlogger</docker.username>
+		<docker.username>trialogger</docker.username>
 	</properties>
 	<dependencies>
 		<dependency>
