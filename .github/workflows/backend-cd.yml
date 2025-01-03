@@ -42,15 +42,15 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Set build number
         id: build-number
-        run: echo "BUILD_NUMBER=$(date '+%d.%m.%Y.%H.%M.%S')">>$GITHUB_OUTPUT
+        run: echo "BUILD_NUMBER=$(date '+%d.%m.%Y.%H.%M.%S')" >> $GITHUB_OUTPUT
       - name: Build package push with Maven
         run: mvn -ntp -B verify -D docker.image.tag=${{steps.build-number.outputs.BUILD_NUMBER}} jib:build
       - name: Update Dockerrun.aws.json api image tag with new build number
         run: |
           echo "Dockerrun.aws.json before updating tag"
           cat Dockerrun.aws.json 
-          sed -i -E 's_(tlogger/tlog-crud-api:)([^"]*)_\1'${{steps.build-number.outputs.BUILD_NUMBER}}'_' Dockerrun.aws.json
-          echo "Dockerrun.aws.json" after updating tag"
+          sed -i -E 's_(trialogger/tlog-crud-api:)([^"]*)_\1'${{steps.build-number.outputs.BUILD_NUMBER}}'_' Dockerrun.aws.json
+          echo "Dockerrun.aws.json after updating tag"
           cat Dockerrun.aws.json
       - name: Deploy to Elastic Beanstalk
         uses: einaregilsson/beanstalk-deploy@v22
