@@ -15,8 +15,8 @@
 	<description>Basic CRUD api</description>
 	<properties>
 		<java.version>17</java.version>
-		<docker.username>trialoggerad</docker.username>
-		<docker.image.name>tlog-api</docker.image.name>
+		<docker.username>trialogger</docker.username>
+		<docker.image.name>tlog-crud-api</docker.image.name>
 		<docker.image.tag>tlog</docker.image.tag>
 	</properties>
 	<dependencies>
