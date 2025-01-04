@@ -15,7 +15,7 @@ services:
     restart: unless-stopped
   tlog-crud-api:
     container_name: tlog-crud-api
-    image: tlogger/tlog-crud-api
+    image: trialogger/tlog-crud-api
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/customer
     ports:
