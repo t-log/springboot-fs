@@ -1,0 +1,7 @@
+/home/runner/work/springboot-fs/springboot-fs/backend/src/test/java/com/tlog/AbstractTestContainers.java
+/home/runner/work/springboot-fs/springboot-fs/backend/src/test/java/com/tlog/TestContainerTest.java
+/home/runner/work/springboot-fs/springboot-fs/backend/src/test/java/com/tlog/dao/CustomerJPADataAccessServiceTest.java
+/home/runner/work/springboot-fs/springboot-fs/backend/src/test/java/com/tlog/journey/CustomerIntegrationTest.java
+/home/runner/work/springboot-fs/springboot-fs/backend/src/test/java/com/tlog/repository/CustomerRepositoryTest.java
+/home/runner/work/springboot-fs/springboot-fs/backend/src/test/java/com/tlog/service/CustomerJDBCDataAccessServiceTest.java
+/home/runner/work/springboot-fs/springboot-fs/backend/src/test/java/com/tlog/service/CustomerServiceTest.java
