@@ -87,6 +87,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webflux</artifactId>
+			<version>3.2.8</version>
 			<scope>test</scope>
 		</dependency>
 
