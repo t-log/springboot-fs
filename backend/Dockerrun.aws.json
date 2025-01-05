@@ -3,7 +3,7 @@
   "containerDefinitions": [
     {
       "name": "tlog-crud-api",
-      "image": "trialogger/tlog-crud-api:05.01.2025.08.14.40",
+      "image": "trialogger/tlog-crud-api:05.01.2025.08.18.51",
       "essential": true,
       "memory": 512,
       "portMappings": [
